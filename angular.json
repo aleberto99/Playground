@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Playground"
+  "defaultProject": "Playground",
+  "cli": {
+    "analytics": false
+  }
 }
