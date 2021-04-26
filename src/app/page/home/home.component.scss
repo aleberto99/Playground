@@ -1,0 +1,69 @@
+@import "../../../styles.scss";
+@import "../../styles/media-queries";
+
+.carousel{
+    z-index: 0 !important;
+}
+
+.container-text{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    color: white;
+    
+    h2{
+        font-size: 80px;
+    }
+
+    h6{
+        font-family: $primary_font_light;
+        font-size: 18px;
+        font-weight: $thin;
+    }
+}
+
+.content-card{
+    background-color: #ebebeb;
+    padding: 40px;
+    &__card{
+        display: flex;
+        justify-content: center;
+
+        @include respond-below(sm){
+            display: block;
+        }
+    }
+}
+
+.content-tab{
+    background-color: #ebebeb;
+    height: 350px;
+    padding: 50px 150px;
+    @include respond-below(md){
+        height: 500px;
+        padding: 12px 36px;
+    }
+    @include respond-below(xs){
+        padding: 12px 28px;
+    }
+
+}
+
+.content-contact{
+    height: 400px;
+    background-color: black;
+    padding: 50px 150px;
+    @include respond-below(md){
+        height: 700px;
+    }
+    @include respond-below(md){
+        height: 750px;
+        padding: 15px 36px;
+    }
+}
+
+.content-footer{
+    background-color: black;
+    border-top: 1px solid white;
+    padding-bottom: 50px;
+}

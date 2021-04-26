@@ -1,0 +1,85 @@
+@import "../../styles/media-queries";
+@import "../../../styles.scss";
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    justify-content: space-around;
+
+    @include respond-below(sm){
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: block;
+    }
+    @include respond-below(xs){
+        position: fixed;
+        z-index: 1000;
+    }
+
+    
+    &__content-image{
+        @include respond-below(sm){
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    img{
+        margin: 0 16px;
+    }
+
+    &__container-menu{
+        @include respond-below(sm){
+            margin: 12px 0;
+        }
+    }
+
+    &__content-menu{
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        @include respond-below(sm){
+            text-align: center;
+            display: inline;
+        }
+    }
+
+    li{
+        padding-right: 40px;
+        @include respond-below(sm){
+            padding-right: 0px;
+            padding-bottom: 8px;
+        }
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-family: $primary_font_light;
+        @include respond-below(sm){
+            color: black;
+        }
+    }
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 100000;
+    background-color: white;
+    a{
+        color: black;
+    }
+}

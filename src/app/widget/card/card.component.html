@@ -1,0 +1,11 @@
+<div class="container-card" *ngFor="let data of dataCard">
+  <div class="container-card__content-image" >
+    <img src="{{data.url}}" alt="{{altPhoto}}" />
+  </div>
+  <div class="container-card__content-text">
+    <p>{{data.text}}</p>
+  </div>
+  <div class="container-card__content-button">
+    <button>{{'Read More' | uppercase}}</button>
+  </div>
+</div>

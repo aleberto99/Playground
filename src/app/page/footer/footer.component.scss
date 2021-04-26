@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+@import '../../styles/media-queries';
+
+.content-image{
+    padding-top: 70px;
+    text-align: center;
+}
+.container-menu{
+    padding-top: 60px;
+    &__content-menu{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        color: white;
+        @include respond-below(xs){
+            display: block;
+            text-align: center;
+        }
+    
+        li{
+            padding-right: 70px;
+            @include respond-below(xs){
+                padding-right: 0px;
+                padding-bottom: 28px;
+            }
+        }
+    
+        li:last-child{
+            padding-right: 0px;
+            @include respond-below(xs){
+                padding-bottom: 0px;
+            }
+        }
+    
+        a{
+            color: white;
+            text-decoration: none;
+            font-family: $primary_font_light;
+        }
+    }
+}
+

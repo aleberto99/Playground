@@ -1,0 +1,52 @@
+<div class="container-contact" id="contact-us">
+  <div class="container-contact__content-text">
+    <div class="text">
+      <h3>contact<br> us.</h3>
+      <p>Playground srl </p>
+      <p>Via G. Mazzini 3/C,<br> 
+        Cernusco Sul Naviglio (Milano)</p>
+      <span>-</span>
+      <p>T +39 0240706003</p>
+    </div>
+  </div>
+  <div class="container-contact__container-form">
+    <form [formGroup]="form" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)" >
+      <div class="content-form">
+        <div class="content-form__type-text">
+          <input formControlName="name" class="content-form__text" type="text" placeholder="name">
+        </div>
+        <div class="content-form__type-text">
+          <input formControlName="last_name" class="content-form__text" type="text" placeholder="last name">
+        </div>
+      </div>
+      <div class="content-email">
+        <input formControlName="email" class="content-email__email" type="email" placeholder="email*">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert">
+          <div *ngIf="email.errors.required">
+            email is required.
+          </div>
+        </div>
+        
+      </div>
+      <div class="content-textarea">
+        <textarea formControlName="message" class="content-textarea__textarea" placeholder="message*" ></textarea>
+        <div *ngIf="message.invalid && (message.dirty || message.touched)"
+          class="alert">
+          <div *ngIf="message.errors.required">
+            message is required.
+          </div>
+        </div>
+        
+      </div>
+      <div class="content-button">
+        <button type="submit">
+          Send
+          <mat-icon aria-hidden="false" class="content-button__icon">
+            chevron_right
+            </mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-tab">
+  <div class="container-tab__content-tab">
+    <div class="container-tab__content-button">
+      <button [ngClass]="{'active': activeClass === tabEnum.TAB1}" (click)="buttonTab('tab-1')">
+        {{titleTab1}}
+        <mat-icon aria-hidden="false" class="container-tab__icon">
+        {{hide.tab1 ? "expand_more" : "expand_less"}}
+        </mat-icon>
+      </button>
+    </div>
+    <div class="container-tab__content-button">
+      <button [ngClass]="{'active': activeClass === tabEnum.TAB2}" (click)="buttonTab('tab-2')">
+        {{titleTab2}}
+        <mat-icon aria-hidden="false" class="container-tab__icon">
+        {{hide.tab2 ? "expand_more" : "expand_less"}}
+        </mat-icon>
+      </button>
+    </div>
+    <div class="container-tab__content-button">
+      <button [ngClass]="{'active': activeClass === tabEnum.TAB3}" (click)="buttonTab('tab-3')">
+        {{titleTab3}}
+        <mat-icon aria-hidden="false" class="container-tab__icon">
+        {{hide.tab3 ? "expand_more" : "expand_less"}}
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="viewContentText" class="container-tab__content-text">
+    <div class="container-tab__text">
+      <app-spinner *ngIf="showSpinner" class="spinner"></app-spinner>
+      <p *ngIf="hide.tab1">{{contentTab1?.join("")}}</p>
+      <p *ngIf="hide.tab2">{{contentTab2?.join("")}}</p>
+      <p *ngIf="hide.tab3">{{contentTab3?.join("")}}</p>
+    </div>
+  </div>
+</div>

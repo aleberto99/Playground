@@ -1,0 +1,42 @@
+<header>
+  <carousel
+    [images]="images"
+    cellsToShow=1
+    height="800"
+    objectFit="cover"
+    class="carousel">
+    
+  </carousel>
+  <app-toolbar></app-toolbar>
+  <div class="container-text">
+    <h2>lorem<br> ipsum.</h2>
+    <h6>Consectetur adipiscing elit.<br>
+      Nulla condimentum tortor sem,<br>
+      in semper nisl bibendum eu.</h6>
+  </div>
+    
+</header>
+
+<main>
+  <section class="content-card">
+    <app-card
+      [dataCard]="dataCards"
+      class="content-card__card"
+    ></app-card>
+  </section>
+  <section class="content-page">
+    <app-central-page></app-central-page>
+  </section>
+  <section class="content-tab">
+    <app-tab-section></app-tab-section>
+  </section>
+  <section class="content-contact">
+    <app-contact></app-contact>
+  </section>
+</main>
+
+<footer class="content-footer">
+  <app-footer
+  ></app-footer>
+</footer>
+

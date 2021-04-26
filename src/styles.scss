@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "./app/styles/font";
+@import "./app/styles/media-queries";
+
+$primary_font: 'Gotham';
+$primary_font_light: 'Gotham-Book';
+
+/* Font Weight */
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+
+/* Font size */
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+body{
+    font-family: $primary_font;
+    font-size: $primary-fs;
+    font-weight: $regular;
+    margin: 0px;
+    height: 100%;
+    margin: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+
+p {
+    margin: 0;
+}
+}
